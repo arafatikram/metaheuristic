@@ -1,4 +1,4 @@
-<h2 align="center">MATLAB Basics Test for Metaheuristic (With solution)</h2>
+<h2 align="left">MATLAB Basics Test for Metaheuristic (With solution)</h2>
 
 <h3 align="left">Part 1 : Do the followings for the given problem</h3>
 
