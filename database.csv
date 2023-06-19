@@ -1,4 +1,4 @@
-Date,Load,Irr,Temp,Wind,Humid
+Date,Load,Irridiance,Temperature,Wind,Humidity
 1/1/22 0:00,3024,0,14.98,4.73,10.44
 1/1/22 1:00,3103,0,14.55,4.81,10.31
 1/1/22 2:00,3014,0,14.18,4.48,10.25
