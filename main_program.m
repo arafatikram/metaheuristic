@@ -1,6 +1,6 @@
 %% Part 1
-clc; 
-clear all;
+clc; clear all;
+
 NumOfSolutions = 20; 
 Parameter = [1,-0.5, 2.5,1.5];
 LowerBound = [-6, 1, -7, 2]; 
@@ -15,11 +15,11 @@ Fitness = ObjectFunction(Parameter, Solutions); %Generating Fitness with given e
 
 fprintf('Top %d solutions: \n', NumOfTopSolution)
 disp(num2str([MinimizedSetsOfSolutions, MinimizedFuncOutput]))
-AvgFuncOutput(1, :) = mean(MinimizedFuncOutput); %storing average fitness output in a matrix 
+AvgFuncOutput(1, :) = mean(MinimizedFuncOutput); % storing average fitness output in a matrix 
 fprintf('\nBest solutions for Part 1: ')
-[MinFunc, MinFunc_index] = min(MinimizedFuncOutput); %finding index of min function, so that we can call the SetsOfSolution by index 
+[MinFunc, MinFunc_index] = min(MinimizedFuncOutput); % finding index of min function, so that we can call the SetsOfSolution by index 
 disp(MinimizedSetsOfSolutions(MinFunc_index,:))
-GlobalBestSol(1,:)=MinimizedSetsOfSolutions(MinFunc_index,:); %storing best SetsOfSolution in a matrix 
+GlobalBestSol(1,:)=MinimizedSetsOfSolutions(MinFunc_index,:); % storing best SetsOfSolution in a matrix 
 
 %% Part 2
 NewSolSize = NumOfSolutions - NumOfTopSolution;
@@ -73,10 +73,10 @@ disp(num2str([GlobalBestSol, AvgFuncOutput]))
 % fprintf('All Best Solution Sets: \n')
 % disp(GlobalBestSol)
 
-%plotting
+% plotting
 f = plot(AvgFuncOutput);
 title('Minimizing the function output curve')
 xlabel('Number of generation')
 ylabel('Desired Output results')
 saveas(f, 'output.png')
-%exportgraphics(f, 'output.png', 'Resolution', 300) %My ver. doesn;t support this function
+%exportgraphics(f, 'output.png', 'Resolution', 300) % My ver. doesn;t support this function
